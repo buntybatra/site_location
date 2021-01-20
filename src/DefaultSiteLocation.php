@@ -51,7 +51,7 @@ class DefaultSiteLocation {
     $current_time['country'] = $this->config->get('site_location.country');
     $current_time['city'] = $this->config->get('site_location.city');
     $current_time['timezone'] = $this->config->get('site_location.timezone');
-    $current_time['time'] = $this->dateTimeFormatter->format($this->dateTime->getCurrentTime(), '', 'dS M Y - H:i', $current_time['timezone']);
+    $current_time['time'] = $this->dateTimeFormatter->format($this->dateTime->getCurrentTime(), '', 'dS M Y - H:i A', $current_time['timezone']);
     return $current_time;
   }
 
