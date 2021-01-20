@@ -1,0 +1,9 @@
+services:
+  site_location.default:
+    class: Drupal\site_location\DefaultSiteLocation
+    arguments: ['@date.formatter', '@config.factory', '@datetime.time']
+  cache_context.currenttimecontext:
+    class: Drupal\site_location\CacheContext\CurrentTimeCacheContext
+    arguments: ['@date.formatter', '@datetime.time', '@config.factory']
+    tags:
+      - { name: cache.context }

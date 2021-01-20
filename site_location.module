@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains site_location.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function site_location_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the site_location module.
+    case 'help.page.site_location':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Site location') . '</p>';
+      return $output;
+
+    default:
+  }
+}
