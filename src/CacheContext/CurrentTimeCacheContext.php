@@ -56,7 +56,7 @@ class CurrentTimeCacheContext implements CacheContextInterface {
   public function getContext() {
     $timezone = $this->config->get('site_location.timezone');
     return $this->dateFormatter
-      ->format($this->datetimeTime->getCurrentTime(), '', 'dS M Y - H:i A', $timezone);
+      ->format($this->datetimeTime->getCurrentTime(), '', 'dS M Y - h:i A', $timezone);
   }
 
   /**
